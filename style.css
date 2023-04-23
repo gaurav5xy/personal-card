@@ -263,9 +263,6 @@ ul li:nth-child(6):hover span{
   .glassig {
     right: 20px;
   }
-  ul {
-    flex-direction: column;
-  }
 }
 
 /* media query for screens larger than 1023px */

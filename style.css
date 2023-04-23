@@ -159,6 +159,9 @@ ul {
  ul li:nth-child(5):hover span{
   background: #007efc !important;
 }
+ul li:nth-child(6):hover span{
+  background: #98eb2b !important;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -166,34 +169,42 @@ ul {
     background: #4F8B89;
     color: #fff;
     font-family: 'Raleway', sans-serif;
-    max-width: 375px;
-    height: 80%;
+    height: 95%;
+    margin: 4%;
+    padding: 0%;
+    width: 95%;
   }
 
   .glassig {
     background: rgba(173, 209, 148, 0.25);
-    width: 100%;
+    justify-content: center;
+    width: 94%;
     height: 100%;
     top: 50%;
+    left: 48%;
+    position: relative; /* added to make 'right' work properly */
+    right: 0; /* removed fixed pixel value to make it responsive */
   }
   
   img {
-    display: block;
-    margin: 10px 75px;
+    display: flex;
+    margin: 10px 65px;
     width: 60%;
-    height: 220px;
+    height: 215px;
   }
   
   
   .name {
     width: 70%;
     top: 240px;
-    left: 20%;
-    font-size: 18px;
+    left: 15%;
+    font-size: 17px;
     line-height: 40px;
+    text-align: center;
   }
   
   .about {
+    text-align: center;
     top: 370px;
     left: 5%;
     width: 90%;
@@ -202,15 +213,22 @@ ul {
   }
   
   ul {
+    position: relative;
+    padding: 0%;
+    margin: 6%;
+    left: 25px;
+    top: 225px;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    transform: none;
   }
   
   ul li {
     width: 30px;
     height: 30px;
-    margin: 230px 10px;
-    left: 0;
+    margin-left: 8%;
+    margin: 3%;
+    left: 4px;
   }
   
   ul li:before {
@@ -229,5 +247,30 @@ ul {
   
   ul li span {
     font-size: 24px !important;
+  }
+}
+
+
+/* media query for screens smaller than 768px */
+@media only screen and (max-width: 767px) {
+  .glassig {
+    right: 10px;
+  }
+}
+
+/* media query for screens between 768px and 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .glassig {
+    right: 20px;
+  }
+  ul {
+    flex-direction: column;
+  }
+}
+
+/* media query for screens larger than 1023px */
+@media only screen and (min-width: 1024px) {
+  .glassig {
+    right: 850px;
   }
 }

@@ -216,7 +216,7 @@ ul li:nth-child(6):hover span{
     position: relative;
     padding: 0%;
     margin: 6%;
-    left: 25px;
+    left: 1%;
     top: 225px;
     display: flex;
     flex-wrap: wrap;
